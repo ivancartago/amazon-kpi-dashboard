@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Amazon Seller KPI Dashboard</title>
+  <meta name="description" content="Weekly KPI review for an Amazon product portfolio: profit, conversion, ad efficiency, keyword share, competitor gaps, and listing audits.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <div class="title-block">
+        <h1>Amazon Seller KPI Dashboard</h1>
+        <p class="sub" id="brand-line"></p>
+      </div>
+      <div class="week-picker" role="group" aria-label="Choose a week">
+        <label class="wp-month"><span>Month</span>
+          <select id="month-select" aria-label="Month"></select>
+        </label>
+        <div class="wp-weeks">
+          <span class="wp-label" id="week-label">Week of</span>
+          <div class="seg" id="week-buttons" role="group" aria-labelledby="week-label"></div>
+        </div>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Dashboard sections">
+      <button role="tab" data-tab="overview">Weekly overview</button>
+      <button role="tab" data-tab="report">Product report</button>
+      <button role="tab" data-tab="keywords">Keyword share</button>
+      <button role="tab" data-tab="competitors">Competitor gap</button>
+      <button role="tab" data-tab="event">Event impact</button>
+      <button role="tab" data-tab="audit">Listing audit</button>
+      <button role="tab" data-tab="data">Data</button>
+      <button role="tab" data-tab="guide">Guide</button>
+    </nav>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="foot">
+    <p>Built by Ivan Cartago. Sample numbers are generated; data you add is stored only in your browser.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="data/sample-data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
